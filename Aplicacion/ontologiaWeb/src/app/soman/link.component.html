@@ -1,9 +1,0 @@
-<div class="izquierda" *ngIf="(linkontologia)?.length > 0 ;else content">
-	<div *ngFor="let onto of linkontologia">
-		<a href="{{onto.Src}}" target="_blank">{{onto.Value}}</a>
-	</div>
-	
-</div>
-<ng-template #content>
-	<a href="{{linkontologia.Src}}" target="_blank">Enlace</a>
-</ng-template>

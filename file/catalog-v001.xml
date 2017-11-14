@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1508966252904" name="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl" uri="viewonto.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508966252904" name="duplicate:http://www.uci.cu/www2017/viewOntoAbox" uri="viewontowww.abox.owl.proto.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508966252904" name="duplicate:http://www.uci.cu/www2017/viewOntoAbox" uri="viewontowww.abox.owl"/>
-    </group>
-</catalog>

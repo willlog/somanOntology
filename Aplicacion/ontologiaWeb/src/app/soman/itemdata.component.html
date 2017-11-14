@@ -1,0 +1,29 @@
+
+<div class="card">
+	 <div class="card-img-top" *ngIf="(itemdata.img)?.length > 0 ">
+	 	<imageontologia [ontoimage]="itemdata.img"></imageontologia>
+	 </div>
+	 <div>
+		<h4  *ngIf="(itemdata.link)?.length > 0 " class="titleHead"><span class="badge badge-pill badge-default">{{titleSource}}</span></h4>
+	 	<h4  *ngIf="(itemdata.link)?.length == 0 " class="titleHeadNoLink"><span class="badge badge-pill badge-default">{{titleSource}}</span></h4>
+	 </div>
+	  <div class="JoinHeadBodyCar">
+	  	
+	    <div *ngIf="(itemdata.link)?.length > 0 ">
+	    	<linkontologia [linkontologia]="itemdata.link"></linkontologia>
+	 	</div>
+	 	
+	 	<div *ngIf="(itemdata.data)?.length > 0 ">
+	 		<dataontologia [dataontologia]="itemdata.data"></dataontologia>
+	 	</div>
+	  </div>
+	  <div class="card-block">
+					  
+			<div *ngIf="itemdata.relatedby != null" >
+			  	<a *ngFor="let ontoDataLink of itemdata.relatedby.IsRelatedBy">
+			  		<a  class="linkRelated" style="cursor: pointer; color: blue;" (click)="setHide()" routerLinkActive="active">{{ontoDataLink.Value}}</a> | 
+				</a>
+			</div>
+		
+	  </div>
+</div>

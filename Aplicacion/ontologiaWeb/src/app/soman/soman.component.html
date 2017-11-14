@@ -1,0 +1,407 @@
+<div class="container" >
+                <div class="divFlotanteMenu">
+                        <div class="dropdown">
+                                <span class="btn btn-secondary dropdown-toggle buttonMenu"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Options
+                                </span>
+                                <div class="dropdown-menu menuLeft" aria-labelledby="dropdownMenuLink">
+                                        <div *ngFor="let menu of menuItems">
+                                                <button  (click)="menuResource(menu)" class="btn btn-secondary dropdown-item" >{{menu}}</button>
+                                        </div>
+                        
+                        
+                                </div>
+                        </div>
+                </div> 
+        <div class="row">
+               
+                        <div class="card" style="width:100%;" *ngIf="showheader">
+                                <div class="card-header headerCar">
+                                        <div class="row">
+                                                <div class="col-10">
+                                                        <h4>
+                                                                <span class="badge badge-default">{{titleSource}}</span>
+                                                        </h4>
+                                                </div>
+                                                <div class="col">
+                                                        <button (click)="changeButtonPanelHead()"  
+                                                                class="btn btn-primary buttonItemFielDisplay" 
+                                                                type="button" 
+                                                                data-toggle="collapse" 
+                                                                data-target="#collapseHead" 
+                                                                aria-expanded="butonPanelHead" 
+                                                                aria-controls="collapseHead">
+                                                                
+                                                                <div *ngIf="!butonPanelHead">
+                                                                        -
+                                                                </div>
+                                                                <div *ngIf="butonPanelHead">
+                                                                        +
+                                                                </div>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="collapse show" id="collapseHead">
+                                
+                                        <div class="card-img-top" *ngIf="(resource.img)?.length > 0 ">
+                                                <imageontologia [ontoimage]="resource.img"></imageontologia>
+                                        </div>
+
+                                        <div class="JoinHeadBodyCar">
+                                                <div *ngIf="resource.read">
+                                                        <readontologia [readontologia]="resource.read"></readontologia>
+                                                </div>
+                                                
+                                                <div *ngIf="(resource.link)?.length > 0 ">
+                                                        <linkontologia [linkontologia]="resource.link"></linkontologia>
+                                                </div>
+                                                <div *ngIf="(resource.data)?.length > 0 ">
+                                                        <dataontologia [dataontologia]="resource.data"></dataontologia>
+                                                </div>
+                                        </div>
+                                        <div class="card-block">        
+                                                <div *ngIf="resource.relatedby != null" >
+                                                        <a *ngFor="let ontoDataLink of resource.relatedby">
+                                                                <a      class="linkRelated" 
+                                                                        style="cursor: pointer; color: blue;" 
+                                                                        (click)="onSelect(ontoDataLink,resourceOnto,titleSource,isDescribedBysDataDescribeField,resource.relatedby,false)" 
+                                                                        routerLinkActive="active">{{ontoDataLink.Value}}
+                                                                </a> | 
+                                                        </a>
+                                                </div>
+                                        </div>
+                                </div>
+                    </div>
+                 
+                <div *ngIf="showmap" >
+                        <div class="card" style="width:1140px;" [style.height.px]="hMap">
+                                <div class="card-header headerCar">
+                                                <div class="row">
+                                                        <div class="col-10">
+                                                                <h4>
+                                                                        <span class="badge badge-default">MAP</span>
+                                                                </h4>
+                                                        </div>
+                                                        <div class="col">
+                                                                <button (click)="changeButtonPanelMap()"  
+                                                                        class="btn btn-primary buttonItemFielDisplay" 
+                                                                        type="button" 
+                                                                        data-toggle="collapse" 
+                                                                        data-target="#collapseMap" 
+                                                                        aria-expanded="false" 
+                                                                        aria-controls="collapseMap">
+                                                                        
+                                                                        <div *ngIf="!butonPanelMap">
+                                                                                -
+                                                                        </div>
+                                                                        <div *ngIf="butonPanelMap">
+                                                                                +
+                                                                        </div>
+                                                                </button>
+                                                        </div>
+                                                </div>
+                                </div>
+                                <div class="collapse show card-block" id="collapseMap">
+                                        <mapa [puntos]="puntoComparar" [zoom]="12" > </mapa>
+                                </div>
+                               
+                        </div>
+			
+                </div>
+                
+                <div class="card" style="width:100%;">
+                        <div class="card-header headerCar">
+                                <div class="row">
+                                        <div class="col-10">
+                                                <h4>
+                                                        <span class="badge badge-default">Fields of {{nameresourcegrid}}</span>
+                                                </h4>
+                                        </div>
+                                        <div class="col">
+                                                <kendo-switch *ngIf="!butonPanelField"  data-toggle="tooltip" 
+                                                                data-placement="top" 
+                                                                title="Show all Columns"
+                                                                (click)="restoreColumns()"  
+                                                                [(ngModel)]="checked">
+                                                </kendo-switch>
+                                                <button (click)="changeButtonPanelItem()"  
+                                                        class="btn btn-primary buttonItemFielDisplay" 
+                                                        type="button" 
+                                                        data-toggle="collapse" 
+                                                        data-target="#collapseItemsField" 
+                                                        aria-expanded="false" 
+                                                        aria-controls="collapseItemsField">
+                                                        
+                                                        <div *ngIf="!butonPanelField">
+                                                                -
+                                                        </div>
+                                                        <div *ngIf="butonPanelField">
+                                                                +
+                                                        </div>
+                                                </button>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="collapse" id="collapseItemsField">
+                                <div class="card-block JoinHeadBodyCar ">
+                                        <div class="row izquierda ">
+                                                <div *ngFor="let column of isDescribedBysColumn"  class="col-xs-12 col-md-3 example-col">
+                                                        
+                                                                <input  
+                                                                *ngIf="!column.Visible" type="checkbox"
+                                                                id="{{column.Id}}"
+                                                                class="k-checkbox "
+                                                                [disabled]="isDisabled(column.Id)"
+                                                                [checked]="hideColumn(column.Id)"
+                                                                (change)="hideColumn(column.Id)" />
+                                                                
+                                                                <input *ngIf="column.Visible" type="checkbox"
+                                                                id="{{column.Id}}"
+                                                                class="k-checkbox"
+                                                                [disabled]="isDisabled(column.Id)"
+                                                                [checked]="true"
+                                                                (change)="hideColumn(column.Id)" />
+                
+                                                                <label class="k-checkbox-label" for="{{column.Id}}">{{column.Text}}</label>
+                                                        
+
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+               
+                
+                
+                
+
+                
+                
+                <kendo-grid class="container"
+                        [data]="gridData"
+                        style="width:100%;height:100%;"
+                        [pageSize]="state.take"
+                        [skip]="state.skip"
+                        [sort]="state.sort"
+                        [filter]="state.filter"
+                        [sortable]="true"
+                        [pageable]="true"
+                        [filterable]="true"
+                        (dataStateChange)="dataStateChange($event)"
+                        [scrollable]="scrollable" >
+                        
+                        <ng-template kendoGridToolbarTemplate>
+                                <h4>
+                                        <span class="badge badge-default">Datas of {{nameresourcegrid}}</span>
+                                </h4>
+                               
+                        </ng-template>
+                        
+                        <kendo-grid-column      [headerStyle]="{'text-align': 'right','color': '#656565','background': '#c2cad1'}"
+                                                field="Relacionado" 
+                                                [filterable]="false"  
+                                                title="Relacionado" 
+                                                [width]="160"  >
+                                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                <kendo-buttongroup  *ngFor="let ontoDataLink of ontologias.isRelatedBy">
+                                        <button kendoButton     
+                                                                [togglable]="true"  
+                                                                class="buttonKendoGrid"  
+                                                                (click)="onSelect(ontoDataLink,dataItem,ontologias.title.name,ontologias.isDescribedBy,ontologias.isRelatedBy,true)" >
+                                                {{graficar("","",ontoDataLink,dataItem,ontologias)}}
+                                                {{ontoDataLink.Value}}
+                                        </button>
+
+                                </kendo-buttongroup>
+                                
+                                </ng-template>
+                        </kendo-grid-column>
+
+                        <div *ngFor="let ontoField of ontologias.isDescribedBy">
+                                
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'NumberDataItem'"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" 
+                                                        filter="{{ontoField.Kendo}}" 
+                                                        format="{0:c}">
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                {{dataItem[ontoField.Id]}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>  
+                                        </ng-template>
+                                </kendo-grid-column>
+                                
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'DateDataItem'"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" 
+                                                        filter="{{ontoField.Kendo}}" 
+                                                        format="{0:d}">
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                {{dataItem[ontoField.Id] | date:'shortDate'}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+                                
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'LinkDataItem'" 
+                                                        [filterable]="false"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" >
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                <a href="{{dataItem[ontoField.Id]}}" target="_blank">Enlace</a>
+                                                {{graficar(dataItem[ontoField.Id],ontoField.Text,"","","")}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'ImageDataItem'" 
+                                                        [filterable]="false"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" >
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                <imageontologia [ontoimage]="dataImageItem(dataItem[ontoField.Id])"></imageontologia>
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo=='StringDataItem'" 
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" >
+
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                        {{dataItem[ontoField.Id]}}
+                                        {{graficar(dataItem[ontoField.Id],ontoField.Text,"","","")}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'LatitudeDataItem'"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" 
+                                                        filter="{{ontoField.Kendo}}" 
+                                                        width="0"
+                                                        format="{0:c}">
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                {{dataItem[ontoField.Id]}}
+                                                {{graficar(dataItem[ontoField.Id],ontoField.Text,"","","")}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'LongitudeDataItem'"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" 
+                                                        filter="{{ontoField.Kendo}}" 
+                                                        width="0"
+                                                        format="{0:c}">
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                {{dataItem[ontoField.Id]}}
+                                                {{graficar(dataItem[ontoField.Id],ontoField.Text,"","","")}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>
+
+                                <kendo-grid-column      [headerStyle]="{'color': '#020101b3','background': '#4267b2'}"
+                                                        [hidden]="hiddenColumns.indexOf(ontoField.Id) > -1" 
+                                                        *ngIf="ontoField.Tipo == 'EmailDataItem'"   
+                                                        field="{{ontoField.Id}}" 
+                                                        title="{{ontoField.Text}}" >
+                                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                                <emailontologia [emailontologia]="dataEmailItem(dataItem[ontoField.Id])" (OpenDialogMail)="OpenDialogMail($event)"></emailontologia>
+                                                {{graficar(dataItem[ontoField.Id],ontoField.Text,"","","")}}
+                                        </ng-template>
+                                        <ng-template kendoGridHeaderTemplate let-dataItem>
+                                                <h6>
+                                                        <span class="badge badge-default">{{ontoField.Text}}</span>
+                                                </h6>
+                                        </ng-template>
+                                </kendo-grid-column>                                
+                        </div>
+                </kendo-grid>
+        </div>
+
+</div>
+
+
+<kendo-dialog *ngIf="opened" (close)="close(false)" [width]="450">
+        <div *ngIf="sendEmail" class="alert alert-success" role="alert">
+            Message was Sended.
+        </div>
+    
+        
+        <kendo-dialog-titlebar class="headDialogMail">
+            <div style="font-size: 18px; line-height: 1.3em;">
+                <i class="fa fa-envelope" aria-hidden="true"></i> Email
+            </div>
+        </kendo-dialog-titlebar>
+        
+        <div  *ngIf="!sendEmail" class="card">
+            <div class="card-block">
+                <div class="k-form">
+                    <div class="k-field">
+                        <legend>Mail Details</legend>
+                        <label class="k-form-field">
+                            <span>To: {{to}}</span>
+                        </label>
+                        <label class="k-form-field">
+                            <span>From <span class="k-required">*</span></span>
+                            <input [(ngModel)] = "from" type="email" class="k-textbox" placeholder="Your Email" />
+                        </label>
+                        <label class="k-form-field">
+                            <span>Message 
+                                <span *ngIf="smsFill" class="k-field-info k-required">Required</span>
+                            </span>
+                            <textarea class="k-textarea" [(ngModel)] = "sms"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <kendo-dialog-actions  *ngIf="!sendEmail">
+            <button kendoButton (click)="close(false)">Close</button>
+            <button kendoButton (click)="close(true)" primary="true">Send</button>
+        </kendo-dialog-actions>
+       
+    </kendo-dialog>

@@ -1,0 +1,30 @@
+{{centrarPunto(puntos)}}
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="false">
+		<agm-marker *ngFor="let location of puntos"  
+		[latitude]="location.latitud" 
+		[longitude]="location.longitud"
+		[label]="location.name"
+		[openInfoWindow]="true">
+					<agm-info-window #infoWindow>
+						<div style="text-align: center;">
+							<div *ngIf="location.profileUrl">
+									<p><a href="{{location.profileUrl}}"> {{location.name}}</a></p>		
+							</div>
+
+							<div *ngIf="!location.profileUrl">
+									<p><a> {{location.name}}</a></p>		
+							</div>
+
+							  
+
+							  <p> Su email: {{location.co}} </p>  						
+								<a  *ngFor="let datos of location.ontologias.isRelatedBy">
+								  <button kendoButton   (click)="so.onSelect(datos,location.dataItem,location.ontologias.title.name,location.ontologias.isDescribedBy,location.ontologias.isRelatedBy,true)" >
+											{{datos.Value}}
+									</button>
+								</a>
+					</div>
+				   
+					</agm-info-window>	
+		</agm-marker>	
+</agm-map>

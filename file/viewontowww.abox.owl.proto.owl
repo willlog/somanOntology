@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.uci.cu/www2017/viewOntoAbox#"
+     xml:base="http://www.uci.cu/www2017/viewOntoAbox"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OntoView="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#">
+    <owl:Ontology rdf:about="http://www.uci.cu/www2017/viewOntoAbox">
+        <owl:imports rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#isDescribedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#isDescribedBy"/>
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#mappedTo -->
+
+    <owl:AnnotationProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#mappedTo"/>
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#sqlCond -->
+
+    <owl:AnnotationProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#sqlCond"/>
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#title -->
+
+    <owl:AnnotationProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#title"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#typekendo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#typekendo"/>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#parameter -->
+
+    <owl:AnnotationProperty rdf:about="http://www.uci.cu/www2017/viewOntoAbox#parameter"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#Proyectos -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#Proyectos">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#View"/>
+        <OntoView:viewRelatedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#WriteBy"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#canton"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#direccion"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#email"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#horas"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#kind"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#latitude"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#longitude"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#periodoFin"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#periodoIni"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#provincia"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#resolucionFin"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#resolucionHCU"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#resolucionInicio"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#responsable"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#sid"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#state"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#telefono"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#title"/>
+        <OntoView:mappedTo>Select sid as Sid, title as Title, latitude as Latitude, longitude as Longitude, email as Email, responsable as Responsable, horas as Horas, direccion as Direccion, canton as Canton, provincia as Provincia, telefono as Telefono, resolucionInicio as ResolucionInicio, resolucionFin as ResolucionFin, resolucionHCU as ResolucionHCU, periodoIni as PeriodoIni, periodoIni as PeriodoIni, periodoFin as PeriodoFin, kind as Kind, state as State from publication</OntoView:mappedTo>
+        <OntoView:title>Projects</OntoView:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#Proyectos"/>
+        <owl:annotatedProperty rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy"/>
+        <owl:annotatedTarget rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#WriteBy"/>
+        <OntoView:sqlCond>where id in (select ci_inv from inv_pro_vi where cod_pro=?)</OntoView:sqlCond>
+        <parameter rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#sid"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#User -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#User">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#View"/>
+        <OntoView:viewRelatedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#createTo"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#carrera"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#direccion"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#email"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#firstname"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#folio"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#gender"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#id"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#lastname"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#latitude"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#longitude"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#matricula"/>
+        <OntoView:isDescribedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#telefono"/>
+        <OntoView:mappedTo>SELECT id as Id, firstname as Firstname, lastname as Lastname, carrera as Carrera, telefono as Telefono, matricula as Matricula , folio as Folio, direccion as Direccion, latitude as Latitude, longitude as Longitude, gender as Gender,  email as Email from user</OntoView:mappedTo>
+        <OntoView:title>Authors</OntoView:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#User"/>
+        <owl:annotatedProperty rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy"/>
+        <owl:annotatedTarget rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#createTo"/>
+        <OntoView:sqlCond>where sid in (Select cod_pro from inv_pro_vi  where ci_inv=?)</OntoView:sqlCond>
+        <parameter rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#id"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#WriteBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#WriteBy">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#InterViewRelationship"/>
+        <OntoView:viewRelatedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#createTo"/>
+        <OntoView:viewRelatedTo rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#User"/>
+        <OntoView:title>Authors</OntoView:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#WriteBy"/>
+        <owl:annotatedProperty rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy"/>
+        <owl:annotatedTarget rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#createTo"/>
+        <OntoView:sqlCond>where sid in (Select cod_pro from inv_pro_vi  where ci_inv=?)</OntoView:sqlCond>
+        <parameter rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#id"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#canton -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#canton">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>canton</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#carrera -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#carrera">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>carrera</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#createTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#createTo">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#InterViewRelationship"/>
+        <OntoView:viewRelatedBy rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#WriteBy"/>
+        <OntoView:viewRelatedTo rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#Proyectos"/>
+        <OntoView:title>Projects</OntoView:title>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#createTo"/>
+        <owl:annotatedProperty rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#viewRelatedBy"/>
+        <owl:annotatedTarget rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#WriteBy"/>
+        <OntoView:sqlCond>where id in (select ci_inv from inv_pro_vi where cod_pro=?)</OntoView:sqlCond>
+        <parameter rdf:resource="http://www.uci.cu/www2017/viewOntoAbox#sid"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#direccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#direccion">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>direccion</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#email -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#email">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#EmailDataItem"/>
+        <OntoView:title>email</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#firstname -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#firstname">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>firstname</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#folio -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#folio">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>folio</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#gender -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#gender">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>gender</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#horas -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#horas">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>horas</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#id -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#id">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#NumberDataItem"/>
+        <OntoView:title>id</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+        <ont:typekendo>numeric</ont:typekendo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#image -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#image">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#ImageDataItem"/>
+        <OntoView:title>image</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#kind -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#kind">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>kind</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#lastname -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#lastname">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>lastname</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#latitude -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#latitude">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#LatitudeDataItem"/>
+        <OntoView:title>latitude</OntoView:title>
+        <ont:typekendo>numeric</ont:typekendo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#longitude -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#longitude">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#LongitudeDataItem"/>
+        <OntoView:title>longitude</OntoView:title>
+        <ont:typekendo>numeric</ont:typekendo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#matricula -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#matricula">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>matricula</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#periodoFin -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#periodoFin">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>periodoFin</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#periodoIni -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#periodoIni">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>periodoIni</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#provincia -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#provincia">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>provincia</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#resolucionFin -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#resolucionFin">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>resolucionFin</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#resolucionHCU -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#resolucionHCU">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>resolucionHCU</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#resolucionInicio -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#resolucionInicio">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>resolucionInicio</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#responsable -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#responsable">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>responsable</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#sid -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#sid">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>sid</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#state -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#state">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>state</OntoView:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#telefono -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#telefono">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>telefono</OntoView:title>
+        <OntoView:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OntoView:visible>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uci.cu/www2017/viewOntoAbox#title -->
+
+    <owl:NamedIndividual rdf:about="http://www.uci.cu/www2017/viewOntoAbox#title">
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#Descriptor"/>
+        <rdf:type rdf:resource="http://cujae.edu.cu/ontologies/2014/02/OntoView.owl#StringDataItem"/>
+        <OntoView:title>title</OntoView:title>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
